@@ -1,0 +1,70 @@
+AllCops:
+  TargetRubyVersion: 2.6.5
+  DefaultFormatter: fuubar
+  Exclude:
+    - db/schema.rb
+    - db/migrate/*
+    - db/seeds/*
+    - bin/*
+    - node_modules/**/*.spec
+    - node_modules/**/*.rb
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 180
+
+Metrics/ClassLength:
+  Max: 200
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: true
+
+Naming/RescuedExceptionsVariableName:
+  PreferredName: error
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+Style/SlicingWithRange:
+  Enabled: true
