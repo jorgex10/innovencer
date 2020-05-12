@@ -1,0 +1,22 @@
+<div class='session-form'>
+  <h2>Log in</h2>
+
+  <%= render 'devise/shared/flash_error_messages' %>
+
+  <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control', autofocus: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: 'btn btn-primary' %>
+      <%= link_to "Sign up", new_registration_path(resource_name), class: 'btn btn-secondary float-right' %>
+    </div>
+  <% end %>
+</div>
