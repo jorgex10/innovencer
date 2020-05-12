@@ -6,7 +6,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 
 gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching; required in config/boot.rb
-gem 'bootstrap', '~> 4.4.1' # The most popular HTML, CSS, and JavaScript framework for developing responsive.
 gem 'jbuilder', '~> 2.7' # Build JSON APIs with ease.
 gem 'pg', '~> 1.2', '>= 1.2.3' # Pg is the Ruby interface to the PostgreSQL RDBMS.
 gem 'puma', '~> 4.1' # Use Puma as the app server.
