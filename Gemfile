@@ -14,6 +14,7 @@ gem 'sass-rails', '>= 6' # Use SCSS for stylesheets.
 gem 'seedbank', '~> 0.5.0' # Adds simple rake commands for seeding your database.
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster.
 gem 'webpacker', '~> 4.0' # Transpile app-like JavaScript.
+gem 'devise', '~> 4.7', '>= 4.7.1' # Flexible authentication solution for Rails with Warden.
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
