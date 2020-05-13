@@ -1,0 +1,14 @@
+<div class="col mb-4">
+  <div class="card h-100 text-center">
+    <div class="card-body">
+      <h4 class="card-title"><%= date_formatter(schedule.scheduled_at) %></h4>
+      <% schedule.quota.each do |quotum| %>
+        <p class="card-text"><%= "<strong>Time:</strong> #{quotum.q_hours}:#{quotum.q_minutes.to_s.rjust(2, '0')}".html_safe %></p>
+        <p class="card-text"><%= "<strong>Amount:</strong> #{quotum.amount}".html_safe %></p>
+      <% end %>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"><%= "Last updated at #{updated_at_formatter(schedule.updated_at)}" %></small>
+    </div>
+  </div>
+</div>

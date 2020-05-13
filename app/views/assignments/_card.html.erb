@@ -1,13 +1,15 @@
-<div class="card text-center">
-  <div class="card-body">
-    <h4 class="card-title"><%= assignment.name %></h4>
-    <p class="card-text"><%= "<strong>Start date:</strong> #{date_formatter(assignment.start_date)}".html_safe %></p>
-    <p class="card-text"><%= "<strong>End date:</strong> #{date_formatter(assignment.end_date)}".html_safe %></p>
-    <%= link_to 'Show', assignment_path(assignment), class: 'btn btn-sm btn-info' %>
-    <%= link_to 'Edit', edit_assignment_path(assignment), class: 'btn btn-sm btn-secondary' %>
-    <%= link_to 'Delete', assignment_path(assignment), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: 'Are you sure?'} %>
-  </div>
-  <div class="card-footer">
-    <small class="text-muted"><%= "Last updated at #{updated_at_formatter(assignment.updated_at)}" %></small>
+<div class="col mb-4">
+  <div class="card h-100 text-center">
+    <div class="card-body">
+      <h4 class="card-title"><%= assignment.name %></h4>
+      <p class="card-text"><%= "<strong>Start date:</strong> #{date_formatter(assignment.start_date)}".html_safe %></p>
+      <p class="card-text"><%= "<strong>End date:</strong> #{date_formatter(assignment.end_date)}".html_safe %></p>
+      <%= link_to 'Show', assignment_path(assignment), class: 'btn btn-sm btn-info' %>
+      <%= link_to 'Edit', edit_assignment_path(assignment), class: 'btn btn-sm btn-secondary' %>
+      <%= link_to 'Delete', assignment_path(assignment), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: 'Are you sure?'} %>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"><%= "Last updated at #{updated_at_formatter(assignment.updated_at)}" %></small>
+    </div>
   </div>
 </div>

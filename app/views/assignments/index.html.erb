@@ -4,7 +4,7 @@
 </h1>
 <hr>
 
-<div class="card-columns">
+<div class="row row-cols-1 row-cols-md-3">
   <% @assignments.each do |assignment| %>
     <%= render 'card', assignment: assignment %>
   <% end %>

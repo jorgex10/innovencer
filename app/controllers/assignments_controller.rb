@@ -10,6 +10,7 @@ class AssignmentsController < ApplicationController
 
   def new
     @assignment = current_user.assignments.new
+    @assignment.schedules.build.quota.build
   end
 
   def create
@@ -50,6 +51,13 @@ class AssignmentsController < ApplicationController
   end
 
   def assignment_params
-    params.require(:assignment).permit(:name, :start_date, :end_date)
+    params.require(:assignment).permit(
+      :name,
+      :start_date,
+      :end_date,
+      schedules_attributes: [:id, :scheduled_at, :_destroy, quota_attributes: %i[
+        id q_hours q_minutes amount _destroy
+      ]]
+    )
   end
 end

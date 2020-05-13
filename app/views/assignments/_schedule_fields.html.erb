@@ -1,0 +1,19 @@
+<div class='nested-fields'>
+  <div class='row'>
+    <div class="col-3">
+      <div class="form-group">
+        <%= f.label :scheduled_at %>
+        <%= f.select :scheduled_at, f.object.assignment.options_for_select, { prompt: 'Select a day' }, { class: 'form-control' } %>
+      </div>
+    </div>
+    <%= link_to_remove_association "remove schedule", f %>
+    <div class="col-2">
+      <div class="quota">
+        <%= f.fields_for :quota do |quota_form| %>
+          <%= render 'quotum_fields', f: quota_form %>
+        <% end %>
+        <%= link_to_add_association 'add quotum', f, :quota %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 
 gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching; required in config/boot.rb
+gem 'cocoon', '~> 1.2', '>= 1.2.14' # Unobtrusive nested forms handling, using jQuery.
 gem 'devise', '~> 4.7', '>= 4.7.1' # Flexible authentication solution for Rails with Warden.
 gem 'jbuilder', '~> 2.7' # Build JSON APIs with ease.
 gem 'pg', '~> 1.2', '>= 1.2.3' # Pg is the Ruby interface to the PostgreSQL RDBMS.
