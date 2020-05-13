@@ -1,4 +1,5 @@
 <div class='nested-fields'>
+  <%= link_to_remove_association 'Remove quotum', f, class: 'badge badge-danger float-right' %>
   <div class="form-group">
     <%= f.label :q_hours, 'Hours' %>
     <%= f.number_field :q_hours, min: 0, max: 24, class: 'form-control' %>
@@ -11,5 +12,4 @@
     <%= f.label :amount %>
     <%= f.number_field :amount, min: 0, class: 'form-control' %>
   </div>
-  <%= link_to_remove_association "remove quotum", f %>
 </div>

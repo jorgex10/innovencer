@@ -25,8 +25,10 @@
     <%= f.fields_for :schedules do |schedule_form| %>
       <%= render 'schedule_fields', f: schedule_form %>
     <% end %>
-    <%= link_to_add_association 'add schedule', f, :schedules %>
+    <%= link_to_add_association 'Add schedule', f, :schedules, class: 'btn btn-sm btn-dark' %>
   </div>
+
+  <hr>
 
   <div class="actions">
     <%= f.submit class: 'btn btn-primary' %>
