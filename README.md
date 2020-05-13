@@ -79,5 +79,5 @@ rails db:migrate
 ```
 
 ---
-
 Jorge Calvo G.
+---
