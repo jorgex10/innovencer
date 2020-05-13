@@ -1,0 +1,49 @@
+<%= form_for assignment do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control', autofocus: true %>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <%= f.label :start_date %>
+        <%= f.text_field :start_date, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <%= f.label :end_date %>
+        <%= f.text_field :end_date, class: 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: 'btn btn-primary' %>
+    <%= link_to "Cancel", assignments_path, class: 'btn btn-secondary float-right' %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  $(function() {
+    $('#assignment_start_date').daterangepicker({
+      autoUpdateInput: false,
+      opens: 'center',
+      locale: {
+        cancelLabel: 'Clear',
+        format: 'DD/MM/YYYY'
+      }
+    });
+
+    $('#assignment_start_date').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('DD/MM/YYYY'));
+      $('#assignment_end_date').val(picker.endDate.format('DD/MM/YYYY'));
+    });
+
+    $('#assignment_start_date').on('cancel.daterangepicker', function(ev, picker) {
+      $(this).val('');
+      $('#assignment_end_date').val('');
+    });
+  });
+</script>

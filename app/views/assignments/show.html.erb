@@ -1,0 +1,19 @@
+<h1>
+  <%= @assignment.name %>
+  <%= link_to 'Back to Assignments', assignments_path, class: 'btn btn-primary float-right' %>
+</h1>
+<hr>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Start date</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" disabled value="<%= date_formatter(@assignment.start_date) %>">
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">End date</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" disabled value="<%= date_formatter(@assignment.end_date) %>">
+</div>

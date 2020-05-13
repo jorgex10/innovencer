@@ -1,1 +1,11 @@
-<h1>Assignments Page!</h1>
+<h1>
+  Assignments
+  <%= link_to 'New Assignment', new_assignment_path, class: 'btn btn-primary float-right' %>
+</h1>
+<hr>
+
+<div class="card-columns">
+  <% @assignments.each do |assignment| %>
+    <%= render 'card', assignment: assignment %>
+  <% end %>
+</div>
