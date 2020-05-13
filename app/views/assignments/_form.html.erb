@@ -1,4 +1,14 @@
 <%= form_for assignment do |f| %>
+  <% if assignment.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-danger" role="alert">
+        <% assignment.errors.full_messages.each do |message| %>
+          <p><%= message %></p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control', autofocus: true %>
