@@ -10,7 +10,7 @@ gem 'cocoon', '~> 1.2', '>= 1.2.14' # Unobtrusive nested forms handling, using j
 gem 'devise', '~> 4.7', '>= 4.7.1' # Flexible authentication solution for Rails with Warden.
 gem 'jbuilder', '~> 2.7' # Build JSON APIs with ease.
 gem 'pg', '~> 1.2', '>= 1.2.3' # Pg is the Ruby interface to the PostgreSQL RDBMS.
-gem 'puma', '~> 4.1' # Use Puma as the app server.
+gem 'puma', '~> 4.3' # Use Puma as the app server.
 gem 'rails', '~> 6.0.3' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'.
 gem 'sass-rails', '>= 6' # Use SCSS for stylesheets.
 gem 'seedbank', '~> 0.5.0' # Adds simple rake commands for seeding your database.
